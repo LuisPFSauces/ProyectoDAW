@@ -1,166 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Sansita+Swashed:wght@600&display=swap');@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+/*Syne Mono*/
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@800&display=swap');
+/*Anton*/
 
 *{
-    box-sizing: border-box; 
-    
+    box-sizing: border-box;
 }
 
 html{
     margin: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    background-color: #353540;
+    padding: 0;
 }
 
 body{
-    margin: 0;
-    height: 100%;
-    padding: 15px;   
-}    
+    background-color: whitesmoke;
+    padding: 15px;
+}
 
-main{
-    gap: 15px;
+header{
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 70%;
-    border: 2px solid indianred;
 }
-/*Tarjetas*/
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 500px);
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+main h2{
+    width: 100%;
+    text-align: center;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 2em;
+    text-transform: uppercase;
+    grid-column: 1/-1;
+}
+
 .tarjeta{
     position: relative;
-    width: 300px;
-    height: 500px;
-    overflow: hidden;
-    margin-top: 15px;
-    font-family: 'Courier Prime', monospace;
     color: white;
-}
-
-
-.lado{
-    border-radius: 20px;
-    perspective: 150px;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 2s ease-out;
-}
-
-.tarjeta:hover .frontal{
-    transform: rotateY(-180deg);
-}
-
-.tarjeta:hover .trasera{   
-  -webkit-transform: rotateY(0);
-    transform: rotateY(0deg);
-}
-
-/*Primera tarjeta*/
-
-.n1 .frontal{
-    background-image: url('../images/Imagen.jpg');
-    background-position: left;
-    background-attachment: local;
-}
-
-.n1 .trasera{
-    background: linear-gradient(45deg, rgba(51,12,67,1) 5%, rgba(209,63,99,1) 41%, rgba(227,79,111,1) 68%, rgba(243,140,3,1) 91%, rgba(236,104,22,1) 100%);
-    transform: rotateY(180deg);
-    padding: 25px;
-}
-
-.n1 .trasera h3{
-    text-align: center;
-    font-size: 2em;
-}
-.n1 .cuerpo{
-    position: relative;
-    font-size: 1.25em;
-}
-.n1 .cuerpo::after{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-image: radial-gradient(ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0) 75%);
-    top: -25px;
-    left: 0;
-    border-radius: 5px;
-}
-
-/*Segunda tarjeta*/
-
-.n2 .frontal{
-    background-image: url('../images/Imagen.jpg');
-    background-position: center;
-    background-attachment: local;
-}
-
-.n2 .trasera{
-    background: linear-gradient(45deg, rgba(51,12,67,1) 5%, rgba(209,63,99,1) 41%, rgba(227,79,111,1) 68%, rgba(243,140,3,1) 91%, rgba(236,104,22,1) 100%);
-    transform: rotateY(180deg);
-    padding: 25px;
-}
-
-.n2 .trasera h3{
-    text-align: center;
-    font-size: 2em;
-}
-.n2 .cuerpo{
-    position: relative;
-    font-size: 1.25em;
-}
-.n2 .cuerpo::after{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-image: radial-gradient(ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0) 75%);
-    top: -25px;
-    left: 0;
-    border-radius: 5px;
-}
-
-/*Tercera tarjeta*/
-.n3 .frontal{
-    background-image: url('../images/Imagen.jpg');
-    background-position: right;
-    background-attachment: local;
-}
-
-.n3 .trasera{
-    background: linear-gradient(45deg, rgba(51,12,67,1) 5%, rgba(209,63,99,1) 41%, rgba(227,79,111,1) 68%, rgba(243,140,3,1) 91%, rgba(236,104,22,1) 100%);
-    transform: rotateY(180deg);
-    padding: 25px;
-}
-
-.n3 .trasera h3{
-    text-align: center;
-    font-size: 2em;
-}
-.n3 .cuerpo{
-    position: relative;
-    font-size: 1.25em;
-}
-.n3 .cuerpo::after{
-    content: ' ';
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background-image: radial-gradient(ellipse, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0) 75%);
-    top: -25px;
-    left: 0;
-    border-radius: 5px;
-}
-
-.n3 .cuerpo a{
     text-decoration: none;
+    background-image: url(../images/ordenador.jpg);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: 500px 250px;
+    height: 250px;
+    width: 500px;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+
+.tarjeta h3{
+    font-family: 'MuseoModerno', cursive;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 75px;
+    transition: all 2s ease-in-out;
+}
+
+.tarjeta .info{
+    padding: 15px;
+    position: absolute;
+    opacity: 0;
+    bottom: -75px;
+    transition: all 2s ease-in-out;
+}
+
+.tarjeta .info p{
+    color: black;
+    font-family: 'Syne Mono', monospace;
+}
+
+.tarjeta:hover h3{
+    font-size: 3em;
+    margin-top: 15px;
+}
+
+.tarjeta:hover .info{
+    opacity: 1;
+    bottom: 0;
+    background-color: whitesmoke;
+}
+
+footer{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(67, 67, 67);
+    padding: 5px;
+    justify-content: space-around;
     color: white;
+}
+
+@media screen and (max-width: 2270px) {
+    main{
+        grid-template-columns: repeat(3, 500px);
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    main{
+        grid-template-columns: repeat(2, 500px);
+    }
+}
+
+@media screen and (max-width: 1068px) {
+    main{
+        grid-template-columns: repeat(1, 500px);
+    }
 }
